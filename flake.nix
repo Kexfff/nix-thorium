@@ -15,10 +15,10 @@
       thorium-avx = let
         pkgs = import nixpkgs {system = "x86_64-linux";};
         name = "thorium-avx";
-        version = "122.0.6261.132 - 56";
+        version = "130.0.6723.174 - 62";
         src = pkgs.fetchurl {
-          url = "https://github.com/Alex313031/thorium/releases/download/M122.0.6261.132/thorium_browser_122.0.6261.132_AVX.AppImage";
-          sha256 = "sha256-2PJxnKzppjHrYQnGYYe1BG0075FwDdnjY0JI2X5AIvQ=";
+          url = "https://github.com/Alex313031/thorium/releases/download/M130.0.6723.174/Thorium_Browser_130.0.6723.174_AVX.AppImage";
+          #sha256 = "sha256-2PJxnKzppjHrYQnGYYe1BG0075FwDdnjY0JI2X5AIvQ=";
         };
         appimageContents = pkgs.appimageTools.extractType2 {inherit name src;};
       in
@@ -35,10 +35,10 @@
       thorium-avx2 = let
         pkgs = import nixpkgs {system = "x86_64-linux";};
         name = "thorium-avx2";
-        version = "122.0.6261.132 - 56";
+        version = "130.0.6723.174 - 62";
         src = pkgs.fetchurl {
-          url = "https://github.com/Alex313031/thorium/releases/download/M122.0.6261.132/thorium_browser_122.0.6261.132_AVX2.AppImage";
-          sha256 = "sha256-HANrDUv/oFW2uWLSYilTCzdnZDY1yuqhLo/jRQil3QA=";
+          url = "https://github.com/Alex313031/thorium/releases/download/M130.0.6723.174/Thorium_Browser_130.0.6723.174_AVX2.AppImage";
+          #sha256 = "sha256-HANrDUv/oFW2uWLSYilTCzdnZDY1yuqhLo/jRQil3QA=";
         };
         appimageContents = pkgs.appimageTools.extractType2 {inherit name src;};
       in
@@ -92,7 +92,7 @@
         program = "${self.packages.x86_64-linux.thorium-sse3}/bin/thorium-sse3";
       };
 
-      default = self.apps.x86_64-linux.thorium-avx;
+      default = self.apps.x86_64-linux.thorium-avx2;
     };
 
     ##### aarch64-linux #####
